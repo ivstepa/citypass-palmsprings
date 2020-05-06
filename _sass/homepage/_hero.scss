@@ -1,0 +1,27 @@
+.hero {
+  height: calc(100vh - 200px);
+  width: 100%;
+
+  &__image {
+    background: url('/assets/images/cover.jpg') center no-repeat;
+    background-position: cover;
+    height: 100%;
+  }
+
+  &__header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80px);
+  }
+
+  &__logo {
+    width: 250px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+}
