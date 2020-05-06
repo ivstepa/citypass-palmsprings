@@ -23,10 +23,30 @@
 
   &__social {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    .facebook {
+      background-image: url(../images/svg/facebook.svg);
+    }
+
+    .twitter {
+      background-image: url(../images/svg/twitter.svg);
+    }
+
+    .instagram {
+      background-image: url(../images/svg/instagram.svg);
+    }
   }
 
   &__item {
     margin: 0 5px;
-    width: 10px;
-  }
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 3rem 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    }
 }
