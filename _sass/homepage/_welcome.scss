@@ -26,27 +26,27 @@
     display: flex;
     justify-content: center;
 
-    &--facebook {
-      background-image: url(../images/svg/facebook.svg);
-    }
+    &__item {
+      margin: 0 5px;
+      display: block;
+      width: 47px;
+      height: 47px;
+      background-size: 3rem 3rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
 
-    &--twitter {
-      background-image: url(../images/svg/twitter.svg);
-    }
+        &--facebook {
+          background-image: url(../images/svg/facebook.svg);
+        }
 
-    &--instagram {
-      background-image: url(../images/svg/instagram.svg);
-    }
+        &--twitter {
+          background-image: url(../images/svg/twitter.svg);
+        }
+
+        &--instagram {
+          background-image: url(../images/svg/instagram.svg);
+        }
+      }
   }
-
-  &__item {
-    margin: 0 5px;
-    display: block;
-    width: 47px;
-    height: 47px;
-    background-size: 3rem 3rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    }
 }
