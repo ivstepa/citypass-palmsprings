@@ -9,5 +9,47 @@
     background-color: $green;
     color: $white;
   }
+}
 
+.glide {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  &__arrow {
+    border-radius: 50%;
+    border: 2px solid $green;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 13px;
+  }
+
+    :hover {
+      border-color: $green;
+    }
+
+  &__bullet {
+    border: 2px solid $green;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 4px;
+
+    &:focus {
+      border: 2px solid $green;
+      background-color: $green;
+    }
+
+    &--active {
+      background-color: $green;
+    }
+
+    :hover{
+      border-color: $green;
+    }
+
+  }
 }
