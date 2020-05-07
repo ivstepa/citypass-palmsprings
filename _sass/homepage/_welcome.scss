@@ -17,24 +17,24 @@
     font-size: 2rem;
     font-weight: 700;
     border-bottom: 2px solid black;
-    margin: 0 auto;
+    margin: 30px auto 0;
     width: 200px;
   }
 
   &__social {
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
 
-    .facebook {
+    &--facebook {
       background-image: url(../images/svg/facebook.svg);
     }
 
-    .twitter {
+    &--twitter {
       background-image: url(../images/svg/twitter.svg);
     }
 
-    .instagram {
+    &--instagram {
       background-image: url(../images/svg/instagram.svg);
     }
   }
