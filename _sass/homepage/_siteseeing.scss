@@ -60,7 +60,7 @@
 
   &__slide {
 
-    padding-right: 145px;
+    padding-right: 140px;
 
     &__wrapper {
       display: flex;
@@ -80,46 +80,41 @@
       flex-basis: 48%;
       border-radius: 10px;
       overflow: hidden;
+      background-size: cover;
+      background-position: center bottom 50px;
 
       &--trails {
         background-image: url(/assets/images/trails.jpg);
-        background-size: cover;
       }
 
       &--instagrammable {
         background-image: url(/assets/images/instagrammable.jpg);
-        background-size: cover;
       }
 
       &--activities {
         background-image: url(/assets/images/activities.jpg);
-        background-size: cover;
       }
 
       &--houses {
         background-image: url(/assets/images/houses.jpg);
-        background-size: cover;
       }
 
       &--restaurants {
         background-image: url(/assets/images/restaurants.jpg);
-        background-size: cover;
       }
 
       &--hotels {
         background-image: url(/assets/images/hotels.jpg);
-        background-size: cover;
       }
 
       &--shopping {
         background-image: url(/assets/images/shopping.jpg);
-        background-size: cover;
       }
     }
 
     &__title {
       position: absolute;
-      padding: 30px 0;
+      padding: 20px 0;
       bottom: 0;
       width: 100%;
       text-align: center;
