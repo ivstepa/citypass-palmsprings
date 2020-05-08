@@ -18,14 +18,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 
   &__arrow {
     border-radius: 50%;
     border: 2px solid $green;
     box-shadow: none;
     text-shadow: none;
-    padding: 13px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+
+    svg {
+      fill: $green;
+    }
+
+    &--left {
+
+    }
   }
 
     :hover {
