@@ -15,10 +15,6 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
 
   &__arrow {
     border-radius: 50%;
@@ -32,21 +28,21 @@
     svg {
       fill: $green;
     }
-
-    &--left {
-
-    }
   }
 
     :hover {
       border-color: $green;
     }
 
+  &__bullets {
+    bottom: -1em;
+  }
+
   &__bullet {
     border: 2px solid $green;
     box-shadow: none;
     text-shadow: none;
-    padding: 4px;
+    padding: 5px;
 
     &:focus {
       border: 2px solid $green;
@@ -60,6 +56,94 @@
     :hover{
       border-color: $green;
     }
+  }
 
+  &__slide {
+
+    padding-right: 145px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 80vh;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 48%;
+    }
+
+    &__item {
+      position: relative;
+      flex-basis: 48%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &--trails {
+        background-image: url(/assets/images/trails.jpg);
+        background-size: cover;
+      }
+
+      &--instagrammable {
+        background-image: url(/assets/images/instagrammable.jpg);
+        background-size: cover;
+      }
+
+      &--activities {
+        background-image: url(/assets/images/activities.jpg);
+        background-size: cover;
+      }
+
+      &--houses {
+        background-image: url(/assets/images/houses.jpg);
+        background-size: cover;
+      }
+
+      &--restaurants {
+        background-image: url(/assets/images/restaurants.jpg);
+        background-size: cover;
+      }
+
+      &--hotels {
+        background-image: url(/assets/images/hotels.jpg);
+        background-size: cover;
+      }
+
+      &--shopping {
+        background-image: url(/assets/images/shopping.jpg);
+        background-size: cover;
+      }
+    }
+
+    &__title {
+      position: absolute;
+      padding: 30px 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
+      color: $white;
+
+      &--trails,
+      &--restaurants {
+        background-color: $orange;
+      }
+
+      &--instagrammable,
+      &--hotels {
+        background-color: $pink;
+      }
+
+      &--activities,
+      &--shopping {
+        background-color: $blue;
+      }
+
+      &--houses {
+        background-color: $lightgreen;
+      }
+    }
   }
 }
