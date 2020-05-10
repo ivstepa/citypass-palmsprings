@@ -30,14 +30,13 @@ layout: default
 
 <section class="siteseeing">
   <h1 class="siteseeing__title">Site seeing</h1>
-  <div class="glide">
+  <div class="glide" id="category-slider">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
         <li class="glide__slide">
           <div class="glide__slide__wrapper">
             <div class="glide__slide__row">
-              <a href="" class="glide__slide__item glide__slide__item--trails">
-                {%- include trails.html -%}
+              <a href="#" class="glide__slide__item glide__slide__item--trails" data-popup-target="#popup--trails">
                 <div class="glide__slide__title glide__slide__title--trails">Trails</div>
               </a>
               <a href="" class="glide__slide__item glide__slide__item--instagrammable">
@@ -89,21 +88,7 @@ layout: default
   </div>
 </section>
 
-<section class="slideshow">
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-    </div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
+{%- include popup/trails.html -%}
 
 <script>
   new Glide('.glide',{

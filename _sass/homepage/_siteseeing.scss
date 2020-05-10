@@ -12,9 +12,8 @@
 }
 
 .glide {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 0 70px;
 
   &__arrow {
     border-radius: 50%;
@@ -33,10 +32,6 @@
     :hover {
       border-color: $green;
     }
-
-  &__bullets {
-    bottom: -1em;
-  }
 
   &__bullet {
     border: 2px solid $green;
@@ -60,8 +55,6 @@
 
   &__slide {
 
-    padding-right: 140px;
-
     &__wrapper {
       display: flex;
       flex-direction: column;
@@ -77,6 +70,7 @@
 
     &__item {
       display: block;
+      cursor: default;
       position: relative;
       flex-basis: 48%;
       border-radius: 10px;
@@ -121,6 +115,7 @@
       text-align: center;
       font-size: 2rem;
       color: $white;
+      pointer-events: none;
 
       &--trails,
       &--restaurants {

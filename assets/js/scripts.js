@@ -156,4 +156,45 @@ document.addEventListener('DOMContentLoaded', () => {
       map.activate(trigger.dataset.location);
     });
   });
+
+  (() => {
+    const slider = document.getElementById('category-slider');
+    if (!slider) {
+      return;
+    }
+
+    slider.addEventListener('click', (e) => {
+      if (!e.target.dataset.popupTarget) {
+        return;
+      }
+      e.preventDefault();
+      const popup = document.querySelector(e.target.dataset.popupTarget);
+      openPopup(popup);
+    });
+
+      document.addEventListener('click', (e) => {
+      console.log(e.target.dataset);
+      if (!e.target.dataset.hasOwnProperty('closeButton')) {
+        return;
+      }
+      e.preventDefault();
+      const popup = e.target.closest('.popup');
+      console.log(popup);
+      closePopup(popup);
+    });
+  }) ();
+
+  function openPopup(popup) {
+    if (!popup) {
+      return;
+    }
+    popup.classList.add('active');
+  }
+
+  function closePopup(popup) {
+    popup.classList.remove('active');
+    console.log(popup);
+  }
+
 });
+
