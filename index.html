@@ -39,7 +39,7 @@ layout: default
               <a href="#" class="glide__slide__item glide__slide__item--trails" data-popup-target="#popup--trails">
                 <div class="glide__slide__title glide__slide__title--trails">Trails</div>
               </a>
-              <a href="" class="glide__slide__item glide__slide__item--instagrammable">
+              <a href="#" class="glide__slide__item glide__slide__item--instagrammable" data-popup-target="#popup--instagrammable">
                 <div class="glide__slide__title glide__slide__title--instagrammable">Instagrammable</div>
               </a>
             </div>
@@ -56,7 +56,7 @@ layout: default
         <li class="glide__slide">
           <div class="glide__slide__wrapper">
             <div class="glide__slide__row">
-              <a href="" class="glide__slide__item glide__slide__item--restaurants">
+              <a href="" class="glide__slide__item glide__slide__item--restaurants" data-popup-target="#popup--restaurants">
                 <div class="glide__slide__title glide__slide__title--restaurants">Restaurants</div>
               </a>
               <a href="" class="glide__slide__item glide__slide__item--hotels">
@@ -89,26 +89,14 @@ layout: default
 </section>
 
 {%- include popup/trails.html -%}
+{%- include popup/instagrammable.html -%}
+{%- include popup/restaurants.html -%}
 
 <script>
   new Glide('.glide',{
     type: 'carousel',
     perView: 1
   }).mount();
-</script>
-
-<script>
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
 </script>
 
 
