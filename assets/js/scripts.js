@@ -173,13 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
       document.addEventListener('click', (e) => {
-      console.log(e.target.dataset);
       if (!e.target.dataset.hasOwnProperty('closeButton')) {
         return;
       }
       e.preventDefault();
       const popup = e.target.closest('.popup');
-      console.log(popup);
       closePopup(popup);
     });
   }) ();
@@ -192,8 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function closePopup(popup) {
+    if (!popup) {
+      return;
+    }
+
     popup.classList.remove('active');
-    console.log(popup);
   }
 
 });
