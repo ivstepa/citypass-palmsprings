@@ -40,8 +40,8 @@
       fill: $green;
     }
 
-    &--left {
-
+    &--right {
+      transform: rotate(180deg);
     }
   }
 
