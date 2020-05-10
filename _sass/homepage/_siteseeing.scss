@@ -15,6 +15,18 @@
   max-width: 700px;
   margin: 0 auto;
 
+  &__arrows {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
   &__arrow {
     border-radius: 50%;
     border: 2px solid $green;
@@ -27,14 +39,25 @@
     svg {
       fill: $green;
     }
+
+    &--left {
+
+    }
   }
 
     :hover {
       border-color: $green;
     }
 
+  &__bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__bullet {
     border: 2px solid $green;
+    border-radius: 50%;
     box-shadow: none;
     text-shadow: none;
     padding: 5px;
@@ -60,6 +83,7 @@
       flex-direction: column;
       justify-content: space-between;
       height: 80vh;
+      padding: 0 50px;
     }
 
     &__row {
