@@ -157,6 +157,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const sliders = document.querySelectorAll('.glide');
+  const conf = {
+    type: 'carousel',
+    perView: 1
+  };
+
+  sliders.forEach(item => {
+    new Glide(item, conf).mount()
+  });
+
   (() => {
     const slider = document.getElementById('category-slider');
     if (!slider) {
@@ -197,6 +207,5 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.classList.remove('active');
     document.body.style['overflow'] = 'auto';
   }
-
 });
 
