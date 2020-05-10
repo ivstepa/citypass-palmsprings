@@ -187,14 +187,15 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     popup.classList.add('active');
+    document.body.style['overflow'] = 'hidden';
   }
 
   function closePopup(popup) {
     if (!popup) {
       return;
     }
-
     popup.classList.remove('active');
+    document.body.style['overflow'] = 'auto';
   }
 
 });

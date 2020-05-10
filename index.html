@@ -44,10 +44,10 @@ layout: default
               </a>
             </div>
             <div class="glide__slide__row">
-              <a href="" class="glide__slide__item glide__slide__item--activities">
+              <a href="#" class="glide__slide__item glide__slide__item--activities" data-popup-target="#popup--activities">
                 <div class="glide__slide__title glide__slide__title--activities">Activities</div>
               </a>
-              <a href="" class="glide__slide__item glide__slide__item--houses">
+              <a href="#" class="glide__slide__item glide__slide__item--houses" data-popup-target="#popup--houses">
                 <div class="glide__slide__title glide__slide__title--houses">Houses</div>
               </a>
             </div>
@@ -56,15 +56,15 @@ layout: default
         <li class="glide__slide">
           <div class="glide__slide__wrapper">
             <div class="glide__slide__row">
-              <a href="" class="glide__slide__item glide__slide__item--restaurants" data-popup-target="#popup--restaurants">
+              <a href="#" class="glide__slide__item glide__slide__item--restaurants" data-popup-target="#popup--restaurants">
                 <div class="glide__slide__title glide__slide__title--restaurants">Restaurants</div>
               </a>
-              <a href="" class="glide__slide__item glide__slide__item--hotels">
+              <a href="#" class="glide__slide__item glide__slide__item--hotels" data-popup-target="#popup--hotels">
                 <div class="glide__slide__title glide__slide__title--hotels">Hotels</div>
               </a>
             </div>
             <div class="glide__slide__row">
-              <a href="" class="glide__slide__item glide__slide__item--shopping">
+              <a href="#" class="glide__slide__item glide__slide__item--shopping" data-popup-target="#popup--shopping">
                 <div class="glide__slide__title glide__slide__title--shopping">Shopping</div>
               </a>
             </div>
@@ -74,10 +74,10 @@ layout: default
     </div>
     <div class="glide__arrows" data-glide-el="controls">
       <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-        {%- include svg/arrow_left.html -%}
+        {%- include svg/arrow-left.html -%}
       </button>
       <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-        {%- include svg/arrow_right.html -%}
+        {%- include svg/arrow-right.html -%}
       </button>
     </div>
     <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -90,7 +90,11 @@ layout: default
 
 {%- include popup/trails.html -%}
 {%- include popup/instagrammable.html -%}
+{%- include popup/activities.html -%}
+{%- include popup/houses.html -%}
 {%- include popup/restaurants.html -%}
+{%- include popup/hotels.html -%}
+{%- include popup/shopping.html -%}
 
 <script>
   new Glide('.glide',{
