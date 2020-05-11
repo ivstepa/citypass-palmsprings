@@ -1,136 +1,30 @@
 .hotspots {
 
   &__title {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 70px;
-    padding: 30px 0;
     background-color: $orange;
-    color: $white;
   }
 
   .glide {
-    max-width: 770px;
-    margin: 0 auto;
-
-    &__arrows {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 10px;
-      width: 100%;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-    }
-
-    &__arrow {
-      border-radius: 50%;
-      border: 2px solid $green;
-      box-shadow: none;
-      text-shadow: none;
-      padding: 0;
-      width: 30px;
-      height: 30px;
-
-      svg {
-        fill: $green;
-      }
-
-      &--right {
-        transform: rotate(180deg);
-      }
-    }
-
-      :hover {
-        border-color: $green;
-      }
-
-    &__bullets {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    &__bullet {
-      border: 2px solid $green;
-      border-radius: 50%;
-      box-shadow: none;
-      text-shadow: none;
-      padding: 5px;
-
-      &:focus {
-        border: 2px solid $green;
-        background-color: $green;
-      }
-
-      &--active {
-        background-color: $green;
-      }
-
-      :hover{
-        border-color: $green;
-      }
-    }
 
     &__slide {
 
       &__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 120vh;
-        padding: 0 50px;
+        height: 130vh;
       }
 
       &__item {
-        display: block;
-        cursor: default;
-        position: relative;
-        flex-basis: 30%;
-        border-radius: 7px;
-        overflow: hidden;
-        background-size: cover;
+        flex-basis: 32%;
         background-position: center;
-
-        &--shopping {
-          background-image: url('/assets/images/shopping.jpg');
-        }
-
-        &--restaurants {
-          background-image: url('/assets/images/restaurants.jpg');
-        }
-
-        &--hotels {
-          background-image: url('/assets/images/hotels.jpg');
-        }
-
-        &--activities {
-          background-image: url('/assets/images/activities.jpg');
-        }
-
-        &--houses {
-          background-image: url('/assets/images/houses.jpg');
-        }
-
-        &--trails {
-          background-image: url('/assets/images/trails.jpg');
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       &__title {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        transform: translateY(-50%);
-        text-align: center;
-        font-size: 2rem;
-        color: $white;
-        pointer-events: none;
-        text-shadow: 2px 2px 12px $grey;
+        position: static;
+        font-size: 3rem;
+        text-shadow: 2px 2px 30px $grey;
+        background-color: transparent;
       }
     }
   }
