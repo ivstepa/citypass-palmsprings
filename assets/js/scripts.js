@@ -1,3 +1,4 @@
+//Google Maps
 const styles = [
       {
         "elementType": "geometry.fill",
@@ -157,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  //Initilaize Glider.js
   const sliders = document.querySelectorAll('.glide');
   const conf = {
     type: 'carousel',
@@ -167,28 +169,31 @@ document.addEventListener('DOMContentLoaded', () => {
     new Glide(item, conf).mount();
   });
 
+  //Enable popups
   (() => {
-    const slider = document.getElementById('category-slider');
+    const slider = document.querySelectorAll('#category-slider');
     if (!slider) {
       return;
     }
 
-    slider.addEventListener('click', (e) => {
-      if (!e.target.dataset.popupTarget) {
+    slider.forEach(slide => {
+      slide.addEventListener('click', (e) => {
+        if (!e.target.dataset.popupTarget) {
         return;
-      }
-      e.preventDefault();
-      const popup = document.querySelector(e.target.dataset.popupTarget);
-      openPopup(popup);
-    });
+        }
+        e.preventDefault();
+        const popup = document.querySelector(e.target.dataset.popupTarget);
+        openPopup(popup);
+      });
 
       document.addEventListener('click', (e) => {
-      if (!e.target.dataset.hasOwnProperty('closeButton')) {
+        if (!e.target.dataset.hasOwnProperty('closeButton')) {
         return;
-      }
-      e.preventDefault();
-      const popup = e.target.closest('.popup');
-      closePopup(popup);
+        }
+        e.preventDefault();
+        const popup = e.target.closest('.popup');
+        closePopup(popup);
+      });
     });
   }) ();
 
