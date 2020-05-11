@@ -212,5 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.classList.remove('active');
     document.body.style['overflow'] = 'auto';
   }
+  //Initialize Pickaday
+  var picker = new Pikaday({ field: document.getElementById('datepicker') });
 });
 
