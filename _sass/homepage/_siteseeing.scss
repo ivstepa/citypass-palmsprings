@@ -60,6 +60,10 @@
     text-shadow: none;
     padding: 6px;
     margin: 0 3px;
+
+    &--active {
+      background-color: $green;
+    }
   }
 
   &__slide {

@@ -30,24 +30,12 @@
 
     &__item {
       margin: 0 3px;
-      display: block;
-      width: 37px;
-      height: 37px;
-      background-size: 2.6rem 2.6rem;
-      background-position: center;
       border-radius: 50%;
 
-        &--facebook {
-          background-image: url(../images/svg/facebook.svg);
-        }
-
-        &--twitter {
-          background-image: url(../images/svg/twitter.svg);
-        }
-
-        &--instagram {
-          background-image: url(../images/svg/instagram.svg);
-        }
+      svg {
+        width: 40px;
+        height: 40px;
       }
+    }
   }
 }
