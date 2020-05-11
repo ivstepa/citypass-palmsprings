@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   sliders.forEach(item => {
-    new Glide(item, conf).mount()
+    new Glide(item, conf).mount();
   });
 
   (() => {
