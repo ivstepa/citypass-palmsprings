@@ -35,29 +35,37 @@
 
   &__title {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
   }
 
   &__close {
     position: absolute;
-    top: 0;
-    right: 7px;
-    font-weight: 700;
-    line-height: 1;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
+    background-color: transparent;
     border: none;
-    outline: none;
-    background: none;
-    font-size: 3rem;
+    padding: 0;
+
+    svg {
+      pointer-events: none;
+      width: 30px;
+      height: 30px;
+
+      polygon {
+        stroke: $orange;
+        stroke-width: 35;
+      }
+    }
   }
 
   &__body {
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
+    height: calc(100vh - 150px);
     overflow-y: auto;
-    height: 80vh;
   }
 
   &.active {
@@ -94,6 +102,7 @@
 
     &__description {
       margin-bottom: 10px;
+      font-weight: 500;
     }
 
     &__location {
@@ -115,13 +124,14 @@
       line-height: 1rem;
       background: none;
       margin-left: 4px;
+      font-weight: 600;
 
       &:after {
         content: '';
         position: absolute;
-        bottom: 2px;
-        left: 0;
-        width: 97px;
+        bottom: 3px;
+        left: 1px;
+        width: 90px;
         height: 2px;
         background: $green;
       }
