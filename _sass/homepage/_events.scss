@@ -3,4 +3,105 @@
   &__title {
     background-color: $yellow;
   }
+
+  #reportrange {
+    background: #fff;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+  }
+
+  &__body {
+    padding: 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .event {
+      display: flex;
+      flex-basis: calc(50% - 20px);
+      padding-bottom: 40px;
+
+      &__image {
+        background-image: url('/assets/images/trails.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 250px;
+        border-radius: 5px;
+      }
+
+      &__information {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        font-size: 1.25rem;
+      }
+
+      &__title {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      &__description {
+        margin-bottom: 20px;
+      }
+
+      &__date {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      &__time {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      &__cta {
+        display: flex;
+        position: relative;
+
+        &__calendar {
+          display: flex;
+        }
+
+        &__link {
+          position: relative;
+          color: $yellow;
+          padding-left: 5px;
+          font-weight: 600;
+        }
+
+          svg {
+
+            width: 28px;
+            height: 28px;
+
+            path {
+              stroke-width: 22;
+            }
+          }
+
+          &:after {
+          content: '';
+          position: absolute;
+          bottom: 3px;
+          left: 32px;
+          width: 141px;
+          height: 2px;
+          background: $yellow;
+        }
+      }
+    }
+  }
 }
+
+

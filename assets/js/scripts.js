@@ -222,7 +222,27 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('map').scrollIntoView();
   }
 
-  //Initialize Pickaday
-  var picker = new Pikaday({ field: document.getElementById('datepicker') });
+  $(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Today': [moment(), moment()],
+           'This Week': [moment().startOf('week'), moment().endOf('week')],
+           'This Month': [moment().startOf('month'), moment().endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
 });
 
