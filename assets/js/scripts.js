@@ -122,32 +122,25 @@ class GMap {
   constructor(element, { locations, mapOptions }) {
     this.locations = locations;
     this.map = new google.maps.Map(element, mapOptions);
-    this.markers = [];
+    this.markers = {};
 
-  Object.values(this.locations).forEach(location => {
-      const marker = new google.maps.Marker({
+    Object.entries(this.locations).forEach(([key, location]) => {
+      this.markers[key] = new google.maps.Marker({
         position: location,
         map: this.map,
       });
-      this.markers.push(marker);
     });
   }
 
   activate(locationId) {
-
     this.locationId = locationId;
 
-    this.position = this.locations[this.locationId];
-    this.markers.forEach(marker => {
-      const positionMarker = {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()};
+    const marker = this.markers[locationId];
 
-      if(JSON.stringify(this.position) == JSON.stringify(positionMarker)) {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-        setTimeout(() => marker.setAnimation(null), 2000);
-        this.map.panTo(positionMarker);
-      };
-    });
-  };
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(() => marker.setAnimation(null), 2000);
+    this.map.panTo(this.locations[locationId]);
+  }
 }
 
 let map;
@@ -196,8 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.addEventListener('click', (e) => {
         if ((!e.target.dataset.hasOwnProperty('closeButton')) && (!e.target.dataset.hasOwnProperty('location'))) {
-        return;
+          return;
         }
+
         e.preventDefault();
         const popup = e.target.closest('.popup');
         closePopup(popup);
