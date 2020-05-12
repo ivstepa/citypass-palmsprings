@@ -109,45 +109,53 @@ const styles = [
       }
 ];
 
+const locations = {
+  res1: { lat: 44.845056, lng: 20.390421 },
+  res2: { lat: 44.845199, lng: 20.373047 },
+  res3: { lat: 44.851722, lng: 20.352757 },
+  sho1: { lat: 44.853251, lng: 20.350204 },
+  sho2: { lat: 44.855046, lng: 20.352607 },
+  sho3: { lat: 44.854947, lng: 20.358272 }
+}
+
 class GMap {
   constructor(element, { locations, mapOptions }) {
     this.locations = locations;
     this.map = new google.maps.Map(element, mapOptions);
+    this.markers = [];
 
-    this.marker = new google.maps.Marker();
-
+  Object.values(this.locations).forEach(location => {
+      const marker = new google.maps.Marker({
+        position: location,
+        map: this.map,
+      });
+      this.markers.push(marker);
+    });
   }
 
-  activate(location) {
-    this.clear();
+  activate(locationId) {
 
-    if (!this.locations.hasOwnProperty(location)) {
-      return;
-    }
+    this.locationId = locationId;
 
-    this.marker.setAnimation(google.maps.Animation.BOUNCE);
-    setTimeout(() => this.marker.setAnimation(null), 2000);
+    this.position = this.locations[this.locationId];
+    this.markers.forEach(marker => {
+      const positionMarker = {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()};
 
-    this.marker.setPosition(this.locations[location]);
-    this.marker.setMap(this.map);
-    this.map.panTo(this.locations[location]);
-  }
-
-  clear() {
-    this.marker.setAnimation(null);
-    this.marker.setMap(null);
-  }
+      if(JSON.stringify(this.position) == JSON.stringify(positionMarker)) {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(() => marker.setAnimation(null), 2000);
+        this.map.panTo(positionMarker);
+      };
+    });
+  };
 }
 
 let map;
 
 function initMap() {
   map = new GMap(document.getElementById('map'), {
-    locations: {
-      res1: { lat: 44.845056, lng: 20.390421 },
-      res2: { lat: 44.845199, lng: 20.373047 }
-    },
-    mapOptions: { center: new google.maps.LatLng(44.845056, 20.390421), zoom: 16, styles: styles }
+    locations: locations,
+    mapOptions: { center: new google.maps.LatLng(44.845056, 20.390421), zoom: 14, styles: styles }
   });
 }
 
@@ -187,12 +195,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       document.addEventListener('click', (e) => {
-        if (!e.target.dataset.hasOwnProperty('closeButton')) {
+        if ((!e.target.dataset.hasOwnProperty('closeButton')) && (!e.target.dataset.hasOwnProperty('location'))) {
         return;
         }
         e.preventDefault();
         const popup = e.target.closest('.popup');
         closePopup(popup);
+        if (e.target.dataset.hasOwnProperty('location')) {
+          scrollToMap();
+        }
       });
     });
   }) ();
@@ -212,6 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.classList.remove('active');
     document.body.style['overflow'] = 'auto';
   }
+
+  function scrollToMap() {
+    document.getElementById('map').scrollIntoView();
+  }
+
   //Initialize Pickaday
   var picker = new Pikaday({ field: document.getElementById('datepicker') });
 });
