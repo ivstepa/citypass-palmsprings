@@ -142,8 +142,9 @@ layout: default
     <h1 class="title events__title">Events</h1>
     <div class="events__body">
       <div id="reportrange">
-          <i class="fa fa-calendar"></i>&nbsp;
-          <span></span> <i class="fa fa-caret-down"></i>
+        <i class="reportrange__calendar">{%- include svg/calendar.html -%}</i>
+        &nbsp;
+        <span></span><i class="reportrange__arrow">{%- include svg/arrow.html -%}</i>
       </div>
       {%- include events/events.html -%}
     </div>

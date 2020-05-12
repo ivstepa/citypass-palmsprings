@@ -222,10 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('map').scrollIntoView();
   }
 
+  //Date Range Picker
   $(function() {
 
-    var start = moment().subtract(29, 'days');
-    var end = moment();
+    var start = moment();
+    var end = moment().add(29, 'days');
 
     function cb(start, end) {
         $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
@@ -243,6 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cb(start, end);
 
-});
+  });
 });
 
