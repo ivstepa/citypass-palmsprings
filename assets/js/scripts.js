@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function scrollToMap() {
 
     $('html, body').animate({
-        scrollTop: $('#map').offset().top
+        scrollTop : $('#map').offset().top - 100
     }, 500);
   };
 
