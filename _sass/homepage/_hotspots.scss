@@ -13,7 +13,7 @@
       }
 
       &__item {
-        flex-basis: 32%;
+        flex-basis: calc(33% - 20px);
         background-position: center;
         display: flex;
         align-items: center;
