@@ -218,9 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style['overflow'] = 'auto';
   }
 
+  //Scroll to map
   function scrollToMap() {
-    document.getElementById('map').scrollIntoView();
-  }
+
+    $('html, body').animate({
+        scrollTop: $('#map').offset().top
+    }, 500);
+  };
 
   //Date Range Picker
   $(function() {
@@ -275,7 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
           hideEvent(event);
         }
       });
-      console.log(i);
       if (i == 0) {
         showNoEvents();
       } else {
