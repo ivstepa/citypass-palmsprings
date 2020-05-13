@@ -1,9 +1,11 @@
 .hotspots {
 
+//Main styles for title defined in components/_title.scss
   &__title {
     background-color: $orange;
   }
 
+//Main styles for slideshow defined in
   .glide {
 
     &__slide {

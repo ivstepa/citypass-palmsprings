@@ -14,6 +14,12 @@
   pointer-events: none;
   box-shadow: 0 0 20px 0 rgba($black, 0.3);
 
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+    transition: 200ms ease-in-out;
+  }
+
   &:after {
     content: '';
     display: block;
@@ -34,7 +40,7 @@
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
   }
 
@@ -63,66 +69,9 @@
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 190px);
+    height: calc(100% - 200px);
+    height: calc(100vh - 200px);
     overflow-y: auto;
-  }
-
-  &.active {
-    pointer-events: auto;
-    opacity: 1;
-    transition: 200ms ease-in-out;
-  }
-
-  &__item {
-    display: flex;
-    margin: 20px 0;
-
-    &__image {
-      background-image: url('/assets/images/trails.jpg');
-      background-position: center;
-      background-size: cover;
-      flex-basis: 30%;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    &__information {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 70%;
-      margin-left: 20px;
-    }
-
-    &__title {
-      font-size: 1.25rem;
-      margin: 0 0 10px;
-    }
-
-    &__description {
-      margin-bottom: 10px;
-    }
-
-    &__location {
-      display: flex;
-    }
-
-    &__pin {
-
-      svg {
-        width: 22px;
-        height: 22px;
-      }
-    }
-
-    &__button {
-      color: $green;
-
-      &:after {
-        width: 90px;
-        background: $green;
-        bottom: 5px;
-      }
-    }
   }
 
   &__scroll {
@@ -132,7 +81,6 @@
     transform: translateX(-50%) rotate(270deg);;
 
     svg {
-
       width: 25px;
       height: 25px;
 

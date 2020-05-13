@@ -1,0 +1,69 @@
+.item {
+  display: flex;
+  flex-basis: 200px;
+  padding-bottom: 20px;
+
+  &__image {
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+  }
+
+  &__information {
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.25rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin: 0 0 10px;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+  }
+
+  &__date,
+  &__time {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &__cta {
+    display: flex;
+
+    &__icon {
+
+      svg {
+        width: 25px;
+        height: 25px;
+
+        path {
+          stroke-width: 20px;
+        }
+      }
+    }
+
+    &__text {
+      position: relative;
+      color: $green;
+      margin-left: 5px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 6px;
+        left: 0;
+        width: 115px;
+        height: 2px;
+        background: $green;
+      }
+    }
+  }
+}
+

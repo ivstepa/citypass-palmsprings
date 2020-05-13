@@ -1,6 +1,7 @@
 .events {
   min-height: 500px;
 
+//Main styles for title defined in components/_title.scss
   &__title {
     background-color: $yellow;
   }
@@ -24,67 +25,41 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    .event {
-      display: none;
-      flex-basis: calc(50% - 20px);
-      padding-bottom: 40px;
+  }
+}
+
+
+//Main styles for .item defined in components/_item.scss
+.item {
+
+  &__information {
+
+    &--event {
+      flex-basis: 50%;
+    }
+  }
+
+  &--event {
+  display: none;
+  flex-basis: calc(50% - 20px);
+  transition: 200ms ease-in-out;
+
+    &.active {
+      display: flex;
       transition: 200ms ease-in-out;
 
-      &.active {
-        display: flex;
-        transition: 200ms ease-in-out;
-      }
+    }
+  }
+  &__cta {
 
-      &__image {
-        background-image: url('/assets/images/trails.jpg');
-        background-position: center;
-        background-size: cover;
-        width: 250px;
-        height: 250px;
-        border-radius: 5px;
-      }
+    &__text {
 
-      &__information {
-        flex-basis: 50%;
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px;
-        font-size: 1.25rem;
-      }
+      &--event {
+        color: $yellow;
 
-      &__title {
-        font-size: 2rem;
-        margin: 0 0 10px;
-      }
-
-      &__description {
-        margin-bottom: 20px;
-      }
-
-      &__date {
-        margin-bottom: 10px;
-        font-weight: 600;
-      }
-
-      &__time {
-        margin-bottom: 10px;
-        font-weight: 600;
-      }
-
-      &__cta {
-        display: flex;
-
-        &__calendar {
-          display: flex;
-
-          svg {
-            width: 28px;
-            height: 28px;
-
-            path {
-              stroke-width: 22;
-            }
-          }
+        &:after {
+          width: 140px;
+          background: $yellow;
         }
       }
     }

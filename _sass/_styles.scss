@@ -7,13 +7,16 @@
 @import 'mixins/breakpoints';
 
 @import 'components/titles';
-@import 'components/buttons';
+@import 'components/item';
+@import 'components/slideshow';
+@import 'components/popup';
 
 @import 'homepage/hero';
 @import 'homepage/welcome';
 @import 'homepage/map';
 @import 'homepage/siteseeing';
-@import 'homepage/popup';
 @import 'homepage/hotspots';
 @import 'homepage/events';
-@import 'homepage/slideshow';
+
+@import 'images/trails';
+@import 'images/events';

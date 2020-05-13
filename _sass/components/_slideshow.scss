@@ -16,14 +16,12 @@
 
   &__arrow {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     border-radius: 50%;
     border: 2px solid $green;
     background: transparent;
     box-shadow: none;
     text-shadow: none;
-    padding: 0;
     width: 35px;
     height: 35px;
 
