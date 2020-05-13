@@ -86,21 +86,6 @@
             }
           }
         }
-
-        &__button {
-          position: relative;
-          color: $yellow;
-
-          &:after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            width: 140px;
-            height: 2px;
-            background: $yellow;
-          }
-        }
       }
     }
   }

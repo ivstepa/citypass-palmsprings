@@ -107,8 +107,11 @@
     }
 
     &__pin {
-      width: 22px;
-      height: 22px;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
     }
 
     &__button {
@@ -117,20 +120,25 @@
       &:after {
         width: 90px;
         background: $green;
+        bottom: 5px;
       }
     }
   }
 
   &__scroll {
-    width: 30px;
-    height: 30px;
     position: absolute;
     bottom: 8px;
     left: 50%;
     transform: translateX(-50%) rotate(270deg);;
 
-    svg path {
+    svg {
+
+      width: 25px;
+      height: 25px;
+
+      path {
       fill: $orange;
+      }
     }
   }
 }
