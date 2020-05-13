@@ -25,13 +25,9 @@
     flex-wrap: wrap;
 
     .event {
-      display: flex;
+      display: none;
       flex-basis: calc(50% - 20px);
       padding-bottom: 40px;
-      opacity: 0;
-      position: absolute;
-      bottom: 0;
-      left: 0;
       transition: 200ms ease-in-out;
 
       &__image {
@@ -106,10 +102,7 @@
       }
 
       &.active {
-        position: static;
-        bottom: none;
-        left: none;
-        opacity: 1;
+        display: flex;
         transition: 200ms ease-in-out;
       }
     }
@@ -159,17 +152,11 @@
   font-size: 1.25rem;
   text-align: center;
   margin-top: 80px;
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  display: none;
   transition: 200ms ease-in-out;
 
   &.active {
-  opacity: 1;
-  position: static;
-  bottom: none;
-  left: none;
+  display: block;
   transition: 200ms ease-in-out;
   }
 }
