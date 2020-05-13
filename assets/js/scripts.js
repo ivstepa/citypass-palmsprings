@@ -67,7 +67,7 @@ const styles = [
         "elementType": "geometry.fill",
         "stylers": [
           {
-            "color": "#ffc6aa"
+            "color": "#529c8d59"
           }
         ]
       },
@@ -127,6 +127,7 @@ class GMap {
     Object.entries(this.locations).forEach(([key, location]) => {
       this.markers[key] = new google.maps.Marker({
         position: location,
+        icon: "assets/images/pin.png",
         map: this.map,
       });
     });
