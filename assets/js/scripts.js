@@ -225,8 +225,22 @@ document.addEventListener('DOMContentLoaded', () => {
   //Date Range Picker
   $(function() {
 
-    var start = moment();
-    var end = moment().add(29, 'days');
+    const start = moment();
+    const end = moment().add(29, 'days');
+
+    const eventDates = {
+      e1: new Date(2020, 4, 15),
+      e2: new Date(2020, 7, 1),
+      e3: new Date(2020, 8, 1)
+    };
+
+    function addDates(dates) {
+      Object.entries(dates).forEach(([event, date]) => {
+        document.getElementById(event).getElementsByTagName('span')[0].innerHTML = new Intl.DateTimeFormat('en-US').format(date);
+      });
+    };
+
+    addDates(eventDates);
 
     function cb(start, end) {
         $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
@@ -244,6 +258,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cb(start, end);
 
+    updateEvents(start, end);
+
+    //Filter events
+    $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+      updateEvents(picker.startDate, picker.endDate);
+    });
+
+    function updateEvents(startDate, endDate) {
+      let i = 0;
+      Object.entries(eventDates).forEach(([event, date]) => {
+        if ((date >= startDate) && (date <= endDate)) {
+          i++;
+          displayEvent(event);
+        } else {
+          hideEvent(event);
+        }
+      });
+      console.log(i);
+      if (i == 0) {
+        showNoEvents();
+      } else {
+        hideNoEvents();
+      }
+    }
+
+    function displayEvent(event) {
+      if (!event) {
+      return;
+      }
+
+      document.getElementById(event).classList.add('active');
+    }
+
+    function hideEvent(event) {
+      if (!event) {
+      return;
+      }
+
+      document.getElementById(event).classList.remove('active');
+    }
+
+    function showNoEvents() {
+
+      document.getElementById('noevents').classList.add('active');
+    }
+
+    function hideNoEvents() {
+
+      document.getElementById('noevents').classList.remove('active');
+    }
   });
+
 });
 

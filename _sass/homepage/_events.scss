@@ -9,7 +9,7 @@
     cursor: pointer;
     margin-bottom: 40px;
     font-size: 1.25rem;
-    width: 350px;
+    width: 400px;
   }
 
   &__body {
@@ -27,6 +27,11 @@
       display: flex;
       flex-basis: calc(50% - 20px);
       padding-bottom: 40px;
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 200ms ease-in-out;
 
       &__image {
         background-image: url('/assets/images/trails.jpg');
@@ -100,6 +105,14 @@
           background: $yellow;
         }
       }
+
+      &.active {
+        position: static;
+        bottom: none;
+        left: none;
+        opacity: 1;
+        transition: 200ms ease-in-out;
+      }
     }
   }
 }
@@ -143,3 +156,20 @@
   }
 }
 
+#noevents {
+  font-size: 1.25rem;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 200ms ease-in-out;
+
+  &.active {
+  opacity: 1;
+  position: static;
+  bottom: none;
+  left: none;
+  transition: 200ms ease-in-out;
+  }
+}
