@@ -1,0 +1,15 @@
+.button {
+  position: relative;
+  color: $yellow;
+  margin-left: 5px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 140px;
+    height: 2px;
+    background: $yellow;
+  }
+}
