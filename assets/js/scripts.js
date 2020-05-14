@@ -110,12 +110,36 @@ const styles = [
 ];
 
 const locations = {
-  res1: { lat: 44.845056, lng: 20.390421 },
-  res2: { lat: 44.845199, lng: 20.373047 },
-  res3: { lat: 44.851722, lng: 20.352757 },
-  sho1: { lat: 44.853251, lng: 20.350204 },
-  sho2: { lat: 44.855046, lng: 20.352607 },
-  sho3: { lat: 44.854947, lng: 20.358272 }
+  activity1: { lat: 33.740929, lng: -116.409774 },
+  activity2: { lat: 33.795500, lng: -116.499842 },
+  activity3: { lat: 33.821573, lng: -116.546991 },
+  activity4: { lat: 33.824580, lng: -116.497739 },
+  activity5: { lat: 33.833072, lng: -116.546967 },
+  activity6: { lat: 33.801054, lng: -116.484926 },
+  activity7: { lat: 33.820023, lng: -116.545981 },
+  activity8: { lat: 33.819374, lng: -116.546503 },
+  activity9: { lat: 33.858527, lng: -116.558577 },
+  activity10: { lat: 33.792484, lng: -116.494132},
+  activity11: { lat: 33.824450, lng: -116.549795},
+  activity12: { lat: 33.832925, lng: -116.505018},
+  activity13: { lat: 33.811504, lng: -116.528309},
+  activity14: { lat: 33.823455, lng: -116.528766 },
+  activity15: { lat: 33.811868, lng: -116.542563 },
+  activity16: { lat: 33.909292, lng: -116.551905},
+  activity17: { lat: 33.849054, lng: -116.547855 },
+  activity18: { lat: 33.825548, lng: -116.542738},
+  activity19: { lat: 33.908052, lng: -116.566898 },
+  activity20: { lat: 33.823124, lng: -116.546190},
+  activity21: { lat: 33.800417, lng: -116.546162},
+  activity22: { lat: 33.826358, lng: -116.547366}
+  // activity23: { lat: , lng: },
+  // activity24: { lat: , lng: },
+  // activity25: { lat: , lng: },
+  // activity26: { lat: , lng: },
+  // activity27: { lat: , lng: },
+  // activity28: { lat: , lng: },
+  // activity29: { lat: , lng: },
+  // activity30: { lat: , lng: },
 }
 
 class GMap {
