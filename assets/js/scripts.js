@@ -272,17 +272,17 @@ document.addEventListener('DOMContentLoaded', () => {
     addDates(eventDates);
 
     function cb(start, end) {
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+      $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
     }
 
     $('#reportrange').daterangepicker({
-        startDate: start,
-        endDate: end,
-        ranges: {
-           'Today': [moment(), moment()],
-           'This Week': [moment().startOf('week'), moment().endOf('week')],
-           'This Month': [moment().startOf('month'), moment().endOf('month')]
-        }
+      startDate: start,
+      endDate: end,
+      ranges: {
+       'Today': [moment(), moment()],
+       'This Week': [moment().startOf('week'), moment().endOf('week')],
+       'This Month': [moment().startOf('month'), moment().endOf('month')]
+      }
     }, cb);
 
     cb(start, end);

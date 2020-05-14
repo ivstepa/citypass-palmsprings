@@ -37,18 +37,7 @@
 
   &__cta {
     display: flex;
-
-    &__icon {
-
-      svg {
-        width: 25px;
-        height: 25px;
-
-        path {
-          stroke-width: 20px;
-        }
-      }
-    }
+    color: $black;
 
     &__text {
       position: relative;
@@ -58,7 +47,7 @@
       &:after {
         content: '';
         position: absolute;
-        bottom: 6px;
+        bottom: 9px;
         left: 0;
         width: 115px;
         height: 2px;

@@ -1,7 +1,6 @@
 .events {
   min-height: 500px;
 
-//Main styles for title defined in components/_title.scss
   &__title {
     background-color: $yellow;
   }
@@ -28,8 +27,6 @@
   }
 }
 
-
-//Main styles for .item defined in components/_happening.scss
 .item {
 
   &__information {

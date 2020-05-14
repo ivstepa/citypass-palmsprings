@@ -52,16 +52,10 @@
     background-color: transparent;
     border: none;
     padding: 0;
+    color: $orange;
 
     svg {
       pointer-events: none;
-      width: 30px;
-      height: 30px;
-
-      polygon {
-        stroke: $orange;
-        stroke-width: 35;
-      }
     }
   }
 
