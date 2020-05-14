@@ -151,7 +151,6 @@ class GMap {
     Object.entries(this.locations).forEach(([key, location]) => {
       this.markers[key] = new google.maps.Marker({
         position: location,
-        icon: "assets/images/pin.png",
         map: this.map,
       });
     });
@@ -173,7 +172,7 @@ let map;
 function initMap() {
   map = new GMap(document.getElementById('map'), {
     locations: locations,
-    mapOptions: { center: new google.maps.LatLng(44.845056, 20.390421), zoom: 14, styles: styles }
+    mapOptions: { center: new google.maps.LatLng(33.815922, -116.528206), zoom: 11, styles: styles }
   });
 }
 
