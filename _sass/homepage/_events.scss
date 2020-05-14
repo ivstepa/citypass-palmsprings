@@ -29,7 +29,7 @@
 }
 
 
-//Main styles for .item defined in components/_item.scss
+//Main styles for .item defined in components/_happening.scss
 .item {
 
   &__information {
@@ -39,6 +39,15 @@
     }
   }
 
+  &__image {
+
+    &--event1 {
+      width: 250px;
+      height: 250px;
+      background-image: url('/assets/images/trails.jpg');
+    }
+  }
+}
   &--event {
   display: none;
   flex-basis: calc(50% - 20px);
