@@ -78,15 +78,12 @@
     position: absolute;
     bottom: 8px;
     left: 50%;
-    transform: translateX(-50%) rotate(270deg);;
+    transform: translateX(-50%) rotate(270deg);
+    color: $orange;
 
     svg {
       width: 25px;
       height: 25px;
-
-      path {
-      fill: $orange;
-      }
     }
   }
 }

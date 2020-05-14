@@ -68,7 +68,7 @@
 
         &:after {
           width: 140px;
-          background: $yellow;
+          background-color: $yellow;
         }
       }
     }
@@ -79,27 +79,12 @@
 
   &__arrow {
     padding-left: 10px;
+    color: $grey;
 
     svg {
       transform: rotate(-90deg);
       width: 10px;
       height: 10px;
-
-      path {
-        fill: $grey;
-      }
-    }
-  }
-
-  &__calendar {
-
-    svg {
-      width: 20px;
-      height: 20px;
-
-      path {
-        stroke-width: 30px;
-      }
     }
   }
 }

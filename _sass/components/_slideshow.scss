@@ -24,15 +24,7 @@
     text-shadow: none;
     width: 35px;
     height: 35px;
-
-    svg {
-      width: 16px;
-      height: 16px;
-
-      path {
-        fill: $green;
-      }
-    }
+    color: $green;
 
     &--right {
       transform: rotate(180deg);

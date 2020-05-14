@@ -295,48 +295,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateEvents(startDate, endDate) {
-      let i = 0;
+      let hasEvents = false;
       Object.entries(eventDates).forEach(([event, date]) => {
-        if ((date >= startDate) && (date <= endDate)) {
-          i++;
-          displayEvent(event);
-        } else {
-          hideEvent(event);
-        }
+        const state = (date >= startDate) && (date <= endDate);
+
+        document.getElementById(event).classList.toggle('active', state);
+        hasEvents = hasEvents || state;
       });
-      if (i == 0) {
-        showNoEvents();
-      } else {
-        hideNoEvents();
-      }
-    }
 
-    function displayEvent(event) {
-      if (!event) {
-      return;
-      }
-
-      document.getElementById(event).classList.add('active');
-    }
-
-    function hideEvent(event) {
-      if (!event) {
-      return;
-      }
-
-      document.getElementById(event).classList.remove('active');
-    }
-
-    function showNoEvents() {
-
-      document.getElementById('noevents').classList.add('active');
-    }
-
-    function hideNoEvents() {
-
-      document.getElementById('noevents').classList.remove('active');
+      document.getElementById('noevents').classList.toggle('active', !hasEvents);
     }
   });
-
 });
+
+
 
