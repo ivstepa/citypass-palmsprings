@@ -1,10 +1,6 @@
 .events {
   min-height: 500px;
 
-  &__title {
-    background-color: $yellow;
-  }
-
   &__calendar {
     background: #fff;
     cursor: pointer;
@@ -24,75 +20,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-  }
-}
-
-.item {
-
-  &__information {
-
-    &--event {
-      flex-basis: 50%;
-    }
-  }
-
-  &__image {
-
-    &--event {
-      width: 250px;
-      height: 250px;
-      background-image: url('/assets/images/trails.jpg');
-    }
-  }
-
-  &--event {
-  display: none;
-  flex-basis: calc(50% - 20px);
-  transition: 200ms ease-in-out;
-
-    &.active {
-      display: flex;
-      transition: 200ms ease-in-out;
-
-    }
-  }
-  &__cta {
-
-    &__text {
-
-      &--event {
-        color: $yellow;
-
-        &:after {
-          width: 140px;
-          background-color: $yellow;
-        }
-      }
-    }
-  }
-}
-
-.reportrange {
-
-  &__arrow {
-    padding-left: 10px;
-    color: $grey;
-
-    svg {
-      transform: rotate(-90deg);
-      width: 10px;
-      height: 10px;
-    }
-  }
-}
-
-.daterangepicker {
-
-  .drp-buttons {
-
-      .btn {
-        background: none;
-    }
   }
 }
 

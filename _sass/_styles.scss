@@ -1,19 +1,18 @@
-@import 'vendors/glide.core.min';
-
 @import 'base/variables';
+
+@import 'vendors/glide.core.min';
+@import 'vendors/hacks';
 
 @import 'global/base';
 
 @import 'mixins/breakpoints';
 
 @import 'components/titles';
-@import 'components/happening';
+@import 'components/location';
 @import 'components/slideshow';
 @import 'components/popup';
 
 @import 'homepage/hero';
 @import 'homepage/welcome';
 @import 'homepage/map';
-@import 'homepage/siteseeing';
-@import 'homepage/hotspots';
 @import 'homepage/events';

@@ -59,6 +59,10 @@
       justify-content: space-between;
       height: 110vh;
       padding: 0 60px;
+
+      &--tall {
+        height: 130vh;
+      }
     }
 
     &__row {
@@ -77,32 +81,12 @@
       background-size: cover;
       background-position: center bottom 70px;
 
-      &--trails {
-        background-image: url('/assets/images/trails.jpg');
-      }
-
-      &--instagrammable {
-        background-image: url('/assets/images/instagrammable.jpg');
-      }
-
-      &--activities {
-        background-image: url('/assets/images/activities.jpg');
-      }
-
-      &--houses {
-        background-image: url('/assets/images/houses.jpg');
-      }
-
-      &--restaurants {
-        background-image: url('/assets/images/restaurants.jpg');
-      }
-
-      &--hotels {
-        background-image: url('/assets/images/hotels.jpg');
-      }
-
-      &--shopping {
-        background-image: url('/assets/images/shopping.jpg');
+      &--column {
+        flex-basis: calc(33% - 20px);
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -116,22 +100,26 @@
       color: $white;
       pointer-events: none;
 
-      &--trails,
-      &--restaurants {
+      &--centered {
+        position: static;
+        font-size: 3rem;
+        text-shadow: 2px 2px 30px $grey;
+        background-color: transparent;
+      }
+
+      &--orange {
         background-color: $orange;
       }
 
-      &--instagrammable,
-      &--hotels {
+      &--pink {
         background-color: $pink;
       }
 
-      &--activities,
-      &--shopping {
+      &--blue {
         background-color: $blue;
       }
 
-      &--houses {
+      &--lightgreen {
         background-color: $lightgreen;
       }
     }

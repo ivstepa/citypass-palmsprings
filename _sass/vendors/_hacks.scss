@@ -1,0 +1,23 @@
+.reportrange {
+
+  &__arrow {
+    padding-left: 10px;
+    color: $grey;
+
+    svg {
+      transform: rotate(-90deg);
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.daterangepicker {
+
+  .drp-buttons {
+
+      .btn {
+        background: none;
+    }
+  }
+}
