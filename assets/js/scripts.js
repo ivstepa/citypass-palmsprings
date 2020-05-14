@@ -119,19 +119,19 @@ const locations = {
   activity7: { lat: 33.820023, lng: -116.545981 },
   activity8: { lat: 33.819374, lng: -116.546503 },
   activity9: { lat: 33.858527, lng: -116.558577 },
-  activity10: { lat: 33.792484, lng: -116.494132},
-  activity11: { lat: 33.824450, lng: -116.549795},
-  activity12: { lat: 33.832925, lng: -116.505018},
-  activity13: { lat: 33.811504, lng: -116.528309},
+  activity10: { lat: 33.792484, lng: -116.494132 },
+  activity11: { lat: 33.824450, lng: -116.549795 },
+  activity12: { lat: 33.832925, lng: -116.505018 },
+  activity13: { lat: 33.811504, lng: -116.528309 },
   activity14: { lat: 33.823455, lng: -116.528766 },
   activity15: { lat: 33.811868, lng: -116.542563 },
-  activity16: { lat: 33.909292, lng: -116.551905},
+  activity16: { lat: 33.909292, lng: -116.551905 },
   activity17: { lat: 33.849054, lng: -116.547855 },
-  activity18: { lat: 33.825548, lng: -116.542738},
+  activity18: { lat: 33.825548, lng: -116.542738 },
   activity19: { lat: 33.908052, lng: -116.566898 },
-  activity20: { lat: 33.823124, lng: -116.546190},
-  activity21: { lat: 33.800417, lng: -116.546162},
-  activity22: { lat: 33.826358, lng: -116.547366}
+  activity20: { lat: 33.823124, lng: -116.546190 },
+  activity21: { lat: 33.800417, lng: -116.546162 },
+  activity22: { lat: 33.826358, lng: -116.547366 }
   // activity23: { lat: , lng: },
   // activity24: { lat: , lng: },
   // activity25: { lat: , lng: },
@@ -140,7 +140,7 @@ const locations = {
   // activity28: { lat: , lng: },
   // activity29: { lat: , lng: },
   // activity30: { lat: , lng: },
-}
+};
 
 class GMap {
   constructor(element, { locations, mapOptions }) {
