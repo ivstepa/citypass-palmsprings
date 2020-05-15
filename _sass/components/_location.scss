@@ -97,7 +97,7 @@
         &:after {
           width: 140px;
           background-color: $yellow;
-          bottom: 6px;
+          bottom: 10px;
 
           @include breakpoint(tablet) {
             width: 110px;
@@ -107,6 +107,7 @@
       }
     }
     &__icon {
+      color: $black;
 
       svg {
 
