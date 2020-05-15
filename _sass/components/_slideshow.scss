@@ -1,6 +1,10 @@
 .glide {
-  max-width: $narrow;
+  max-width: 870px;
   margin: 0 auto;
+
+  @include breakpoint(laptop) {
+    max-width: 700px;
+  }
 
   &__arrows {
     position: absolute;
@@ -57,11 +61,11 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 110vh;
+      height: 90vh;
       padding: 0 60px;
 
       &--tall {
-        height: 130vh;
+        height: 90vh;
       }
     }
 
@@ -69,7 +73,13 @@
       display: flex;
       justify-content: space-between;
       flex-basis: calc(50% - 20px);
+
+      @include breakpoint(tablet) {
+          flex-basis: calc(50% - 5px);
+        }
     }
+
+
 
     &__item {
       display: block;
@@ -79,7 +89,11 @@
       border-radius: 7px;
       overflow: hidden;
       background-size: cover;
-      background-position: center bottom 70px;
+      background-position: center bottom 60px;
+
+      @include breakpoint(tablet) {
+        flex-basis: calc(50% - 5px);
+      }
 
       &--column {
         flex-basis: calc(33% - 20px);
@@ -87,6 +101,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include breakpoint(tablet) {
+          flex-basis: calc(33% - 5px);
+        }
+
       }
     }
 
@@ -100,11 +119,24 @@
       color: $white;
       pointer-events: none;
 
+      @include breakpoint(laptop) {
+        font-size: 1.4rem;
+        padding: 20px 0;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 1.25rem;
+      }
+
       &--centered {
         position: static;
         font-size: 3rem;
         text-shadow: 2px 2px 30px $grey;
         background-color: transparent;
+
+        @include breakpoint(laptop) {
+          font-size: 2rem;
+        }
       }
 
       &--orange {
