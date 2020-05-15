@@ -34,11 +34,19 @@
 
   &__header {
     padding: 20px 15px;
+
+    @include breakpoint(tablet) {
+      padding: 10px 5px;
+    }
   }
 
   &__title {
     font-size: 3rem;
     text-align: center;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
   }
 
   &__close {
