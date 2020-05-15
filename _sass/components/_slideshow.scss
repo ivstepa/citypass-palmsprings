@@ -59,27 +59,21 @@
 
     &__wrapper {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: space-between;
       height: 90vh;
       padding: 0 60px;
 
-      &--tall {
-        height: 90vh;
+      @include breakpoint(tablet) {
+        flex-direction: column;
+        flex-basis: calc(25% - 5px);
+        flex-wrap: nowrap;
+      }
+
+      &--column {
+        flex-direction: column;
       }
     }
-
-    &__row {
-      display: flex;
-      justify-content: space-between;
-      flex-basis: calc(50% - 20px);
-
-      @include breakpoint(tablet) {
-          flex-basis: calc(50% - 5px);
-        }
-    }
-
-
 
     &__item {
       display: block;
@@ -87,12 +81,17 @@
       position: relative;
       flex-basis: calc(50% - 20px);
       border-radius: 7px;
+      margin: 10px 0;
       overflow: hidden;
       background-size: cover;
       background-position: center bottom 60px;
 
       @include breakpoint(tablet) {
         flex-basis: calc(50% - 5px);
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       &--column {
@@ -125,7 +124,10 @@
       }
 
       @include breakpoint(tablet) {
-        font-size: 1.25rem;
+        font-size: 2rem;
+        position: static;
+        text-shadow: 2px 2px 30px $grey;
+        background-color: transparent;
       }
 
       &--centered {
@@ -141,18 +143,34 @@
 
       &--orange {
         background-color: $orange;
+
+        @include breakpoint(tablet) {
+          background-color: transparent;
+        }
       }
 
       &--pink {
         background-color: $pink;
+
+        @include breakpoint(tablet) {
+          background-color: transparent;
+        }
       }
 
       &--blue {
         background-color: $blue;
+
+        @include breakpoint(tablet) {
+          background-color: transparent;
+        }
       }
 
       &--lightgreen {
         background-color: $lightgreen;
+
+        @include breakpoint(tablet) {
+          background-color: transparent;
+        }
       }
     }
   }
