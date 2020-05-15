@@ -6,10 +6,6 @@
     display: none;
     flex-basis: calc(50% - 20px);
 
-    @include breakpoint(laptop) {
-      flex-basis: 200px;
-    }
-
     &.active {
       display: flex;
     }
@@ -23,6 +19,11 @@
     height: 180px;
     border-radius: 5px;
     margin-top: 6px;
+
+    @include breakpoint(tablet) {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   &__information {
@@ -36,16 +37,28 @@
   &__title {
     font-size: 2rem;
     margin: 0 0 10px;
+
+    @include breakpoint(tablet) {
+      font-size: 1.25rem;
+    }
   }
 
   &__description {
     margin-bottom: 10px;
+
+    @include breakpoint(tablet) {
+      font-size: 1rem;
+    }
   }
 
   &__date,
   &__time {
     margin-bottom: 5px;
     font-weight: 600;
+
+    @include breakpoint(tablet) {
+      font-size: 1rem;
+    }
   }
 
   &__cta {
@@ -58,6 +71,10 @@
       color: $green;
       margin-left: 5px;
 
+      @include breakpoint(tablet) {
+        font-size: 1rem;
+      }
+
       &:after {
         content: '';
         position: absolute;
@@ -66,6 +83,11 @@
         width: 115px;
         height: 2px;
         background: $green;
+
+        @include breakpoint(tablet) {
+          bottom: 6px;
+          width: 92px;
+        }
       }
 
       &--yellow {
@@ -76,6 +98,21 @@
           width: 140px;
           background-color: $yellow;
           bottom: 6px;
+
+          @include breakpoint(tablet) {
+            width: 110px;
+            bottom: 6px;
+          }
+        }
+      }
+    }
+    &__icon {
+
+      svg {
+
+        @include breakpoint(tablet) {
+          width: 20px;
+          height: 20px;
         }
       }
     }
