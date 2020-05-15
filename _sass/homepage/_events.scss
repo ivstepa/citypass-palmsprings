@@ -6,7 +6,6 @@
     cursor: pointer;
     margin-bottom: 40px;
     font-size: 1.25rem;
-    width: 400px;
   }
 
   &__body {
@@ -31,10 +30,8 @@
   text-align: center;
   margin-top: 80px;
   display: none;
-  transition: 200ms ease-in-out;
 
   &.active {
     display: block;
-    transition: 200ms ease-in-out;
   }
 }
