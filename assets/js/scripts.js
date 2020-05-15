@@ -164,6 +164,7 @@ class GMap {
     marker.setAnimation(google.maps.Animation.BOUNCE);
     setTimeout(() => marker.setAnimation(null), 2000);
     this.map.panTo(this.locations[locationId]);
+    this.map.setZoom(16);
   }
 }
 
@@ -257,9 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const end = moment().add(29, 'days');
 
     const eventDates = {
-      e1: new Date(2020, 4, 15),
-      e2: new Date(2020, 7, 1),
-      e3: new Date(2020, 8, 1)
+      e1: new Date(2020, 4, 16),
+      e2: new Date(2020, 4, 18),
+      e3: new Date(2020, 4, 19),
+      e4: new Date(2020, 4, 20),
+      e5: new Date(2020, 4, 22)
     };
 
     function addDates(dates) {
