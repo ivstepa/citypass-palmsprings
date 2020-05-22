@@ -188,7 +188,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const sliders = document.querySelectorAll('.glide');
   const conf = {
     type: 'carousel',
-    perView: 1
+    perView: 1,
+    swipeThreshold: 80,
+    touchAngle: 25,
+    animationDuration: 100,
+    animationTimingFunc: 'ease-in'
   };
 
   sliders.forEach(item => {
@@ -258,11 +262,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const end = moment().add(29, 'days');
 
     const eventDates = {
-      e1: new Date(2020, 4, 16),
-      e2: new Date(2020, 4, 18),
-      e3: new Date(2020, 4, 19),
-      e4: new Date(2020, 4, 20),
-      e5: new Date(2020, 4, 22)
+      e1: new Date(2020, 4, 25),
+      e2: new Date(2020, 5, 18),
+      e3: new Date(2020, 5, 19),
+      e4: new Date(2020, 5, 20),
+      e5: new Date(2020, 5, 22)
     };
 
     function addDates(dates) {
