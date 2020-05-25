@@ -110,36 +110,174 @@ const styles = [
 ];
 
 const locations = {
-  activity1: { lat: 33.740929, lng: -116.409774 },
-  activity2: { lat: 33.795500, lng: -116.499842 },
-  activity3: { lat: 33.821573, lng: -116.546991 },
-  activity4: { lat: 33.824580, lng: -116.497739 },
-  activity5: { lat: 33.833072, lng: -116.546967 },
-  activity6: { lat: 33.801054, lng: -116.484926 },
-  activity7: { lat: 33.820023, lng: -116.545981 },
-  activity8: { lat: 33.819374, lng: -116.546503 },
-  activity9: { lat: 33.858527, lng: -116.558577 },
-  activity10: { lat: 33.792484, lng: -116.494132 },
-  activity11: { lat: 33.824450, lng: -116.549795 },
-  activity12: { lat: 33.832925, lng: -116.505018 },
-  activity13: { lat: 33.811504, lng: -116.528309 },
-  activity14: { lat: 33.823455, lng: -116.528766 },
-  activity15: { lat: 33.811868, lng: -116.542563 },
-  activity16: { lat: 33.909292, lng: -116.551905 },
-  activity17: { lat: 33.849054, lng: -116.547855 },
-  activity18: { lat: 33.825548, lng: -116.542738 },
-  activity19: { lat: 33.908052, lng: -116.566898 },
-  activity20: { lat: 33.823124, lng: -116.546190 },
-  activity21: { lat: 33.800417, lng: -116.546162 },
-  activity22: { lat: 33.826358, lng: -116.547366 }
-  // activity23: { lat: , lng: },
-  // activity24: { lat: , lng: },
-  // activity25: { lat: , lng: },
-  // activity26: { lat: , lng: },
-  // activity27: { lat: , lng: },
-  // activity28: { lat: , lng: },
-  // activity29: { lat: , lng: },
-  // activity30: { lat: , lng: },
+  activity1: {
+    location: { lat: 33.740929, lng: -116.409774 },
+    pin: 'assets/images/green-pin.png'
+  },
+  activity2: {
+    location: { lat: 33.795500, lng: -116.499842 },
+    pin: 'assets/images/orange-pin.png'
+  },
+  activity3: {
+    location: { lat: 33.824580, lng: -116.497739 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  activity5: {
+    location: { lat: 33.833072, lng: -116.546967 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity6: {
+    location: { lat: 33.801054, lng: -116.484926 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity7: {
+    location: { lat: 33.820023, lng: -116.545981 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity8: {
+    location: { lat: 33.819374, lng: -116.546503 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity9: {
+    location: { lat: 33.858527, lng: -116.558577 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity10: {
+    location: { lat: 33.792484, lng: -116.494132 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity11: {
+    location: { lat: 33.824450, lng: -116.549795 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity12: {
+    location: { lat: 33.832925, lng: -116.505018 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity13: {
+    location: { lat: 33.811504, lng: -116.528309 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity14: {
+    location: { lat: 33.823455, lng: -116.528766 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity15: {
+    location: { lat: 33.811868, lng: -116.542563 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity16: {
+    location: { lat: 33.909292, lng: -116.551905 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity17: {
+    location: { lat: 33.849054, lng: -116.547855 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity18: {
+    location: { lat: 33.825548, lng: -116.542738 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity19: {
+    location: { lat: 33.908052, lng: -116.566898 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity20: {
+    location: { lat: 33.823124, lng: -116.546190 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity21: {
+    location: { lat: 33.800417, lng: -116.546162 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  activity22: {
+    location: { lat: 33.826358, lng: -116.547366 },
+    pin: 'assets/images/pink-pin.png'
+  },
+  restaurant1: {
+    location: { lat: 33.825548, lng: -116.542738 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  restaurant2: {
+    location: { lat: 33.8228005, lng: -116.5784875 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  restaurant3: {
+    location: { lat: 33.8237328, lng: -116.5494426 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  restaurant4: {
+    location: { lat: 33.8224049, lng: -116.5482715 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  restaurant5: {
+    location: { lat: 33.83418, lng: -116.5486948 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  restaurant6: {
+    location: { lat: 33.8326959, lng: -116.5487097 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  restaurant7: {
+    location: { lat: 33.8210364, lng: -116.5486592 },
+    pin: 'assets/images/blue-pin.png'
+  },
+  trail1: {
+    location: { lat: 33.8171946, lng: -116.5270641 },
+    pin: 'assets/images/green-pin.png'
+  },
+  trail2: {
+    location: { lat: 33.7497215, lng: -116.5431385 },
+    pin: 'assets/images/green-pin.png'
+  },
+  trail3: {
+    location: { lat: 33.8099974, lng: -116.5549416 },
+    pin: 'assets/images/green-pin.png'
+  },
+  trail4: {
+    location: { lat: 33.8236881, lng: -116.5516245 },
+    pin: 'assets/images/green-pin.png'
+  },
+  trail5: {
+    location: { lat: 33.7497215, lng: -116.5431385 },
+    pin: 'assets/images/green-pin.png'
+  },
+  trail6: {
+    location: { lat: 33.7933265, lng: -116.5652725 },
+    pin: 'assets/images/green-pin.png'
+  },
+  trail7: {
+    location: { lat: 33.820415, lng: -116.548699 },
+    pin: 'assets/images/green-pin.png'
+  },
+  instagrammable1: {
+    location: { lat: 33.7952328, lng: -116.50202 },
+    pin: 'assets/images/orange-pin.png'
+  },
+  instagrammable2: {
+    location: { lat: 33.8171946, lng: -116.5270641 },
+    pin: 'assets/images/orange-pin.png'
+  },
+  instagrammable3: {
+    location: { lat: 33.8328845, lng: -116.549177 },
+    pin: 'assets/images/orange-pin.png'
+  },
+  instagrammable4: {
+    location: { lat: 33.819827, lng: -116.5481482 },
+    pin: 'assets/images/orange-pin.png'
+  },
+  instagrammable5: {
+    location: { lat: 33.8191686, lng: -116.5486591 },
+    pin: 'assets/images/orange-pin.png'
+  },
+  instagrammable6: {
+    location: { lat: 33.8242, lng: -116.552037 },
+    pin: 'assets/images/orange-pin.png'
+  },
+  instagrammable7: {
+    location: { lat: 33.7497215, lng: -116.5431385 },
+    pin: 'assets/images/orange-pin.png'
+  }
 };
 
 class GMap {
@@ -148,10 +286,11 @@ class GMap {
     this.map = new google.maps.Map(element, mapOptions);
     this.markers = {};
 
-    Object.entries(this.locations).forEach(([key, location]) => {
+    Object.entries(this.locations).forEach(([key, info]) => {
       this.markers[key] = new google.maps.Marker({
-        position: location,
+        position: info.location,
         map: this.map,
+        icon: info.pin
       });
     });
   }
@@ -160,10 +299,11 @@ class GMap {
     this.locationId = locationId;
 
     const marker = this.markers[locationId];
+    console.log(marker);
 
     marker.setAnimation(google.maps.Animation.BOUNCE);
     setTimeout(() => marker.setAnimation(null), 2000);
-    this.map.panTo(this.locations[locationId]);
+    this.map.panTo(this.locations[locationId].location);
     this.map.setZoom(16);
   }
 }
