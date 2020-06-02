@@ -114,7 +114,7 @@ const locations = {
     location: { lat: 33.740929, lng: -116.409774 },
     pin: 'assets/images/green-pin.png',
     description:
-    '<h3>Century River Theatre</h3><p>20% discount on all movie tickets!</p><a href="https://www.google.com/maps/dir//Century+at+The+River+and+XD,+71800+CA-111+Ste+A-137,+Rancho+Mirage,+CA+92270,+United+States/@33.7396134,-116.4117286,17z/data=!4m16!1m6!3m5!1s0x80dafdf2ff481b83:0x1b0633ac8289f8d4!2sCentury+at+The+River+and+XD!8m2!3d33.739609!4d-116.4095399!4m8!1m0!1m5!1m1!1s0x80dafdf2ff481b83:0x1b0633ac8289f8d4!2m2!1d-116.4095399!2d33.739609!3e2">Show directions</a><div></div>'
+    '<h3>Century River Theatre</h3><p>20% discount on all movie tickets!</p><a href="https://www.google.com/maps/dir//Century+at+The+River+and+XD,+71800+CA-111+Ste+A-137,+Rancho+Mirage,+CA+92270,+United+States/@33.7396134,-116.4117286,17z/data=!4m16!1m6!3m5!1s0x80dafdf2ff481b83:0x1b0633ac8289f8d4!2sCentury+at+The+River+and+XD!8m2!3d33.739609!4d-116.4095399!4m8!1m0!1m5!1m1!1s0x80dafdf2ff481b83:0x1b0633ac8289f8d4!2m2!1d-116.4095399!2d33.739609!3e2">Show directions</a>'
   },
   activity2: {
     location: { lat: 33.795500, lng: -116.499842 },
